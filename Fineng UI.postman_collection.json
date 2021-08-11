@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "6c5e27b9-e2c3-4684-a015-a8cf927b017f",
+		"name": "Fineng UI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fineng UI login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrf_token",
+							"value": "ImY4NDY3ZTUxNDIwYWRhMDg1MjQ2ODBjMWFiZjE1NzI4MWNhZjIzMTMi.YPGpWQ.TGbRlFgIFxG4dRVIH_TrXyIOuQ",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rhodamane.fajarit@sunpowercorp.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "TeamJesus12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://fineng-ui-qa.mysunpower.com/",
+					"protocol": "https",
+					"host": [
+						"fineng-ui-qa",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fineng Lease Target Margin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://fineng-ui-qa.mysunpower.com/home/Lease%20Target%20Margin",
+					"protocol": "https",
+					"host": [
+						"fineng-ui-qa",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						"home",
+						"Lease%20Target%20Margin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fineng Lease Target Margin FMV Table Load QA env",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-CsrfToken",
+						"value": "Ijk1ZmM2ZjJmMmFjM2MzMzAwN2E3ODA3M2VlOWMwNWIzMjFkZTg2N2Ei.YPHA6g.LedabZnldchZReMAxwsVS52eBfA",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.2.1765621744.1602178315; mp_CHATBOT_MIXPANEL_TOKEN_mixpanel=%7B%22distinct_id%22%3A%20%22anonymous202413114%22%2C%22%24device_id%22%3A%20%2217a7c5933bf8d0-04f7f423488a8a-6373264-100200-17a7c5933c097d%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22%24user_id%22%3A%20%22anonymous202413114%22%7D; intercom-session-vcj0ef1j=TTBLc3RublVFUlV2S1YvMHRLRTNxVVNsTnBIcXl1b2lkekFEUlJhWWxGdllSaExFdzBOWDZOWkwweFk4dmlsdi0tMU1UOEQzcURrRHVIOUpKa0RSeVk1QT09--8aa45bccf6fa7d75a18f5858997a058b876bfb4c; intercom-session-zjhabkm5=emJzc3Uxc28zL2NGZldnbi9hTGh5OUZscy92dDI1ODVvU3dJK1dBc3FRaGhDNG9qZDJJL0lWSUFOSXBVd2hzMi0tZTJZMmxEZjNGeHROM0p4YXR3dis2dz09--edc4df56ac9cf9fcc20c2aff9b155068c6fedf17; mp_YOUR_MIXPANEL_TOKEN_mixpanel=%7B%22distinct_id%22%3A%2058%2C%22%24device_id%22%3A%20%2217579bd127ab1-01d42677099dfb-303464-100200-17579bd127b211%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22%24user_id%22%3A%2058%7D; session=.eJw1zMsNgCAMANBdevaAVL7LECzFGBUNwsm4uyffAO-BcHE9YuHSwLfaeQC6aw7t3LiAB6cy6SyzjISEKISJxgqDzI6EmlGOia02EQbYz2Utf9JvrmFN4Cf3fo76H_E.YPHA6w.wjRTnDWEC9_4udNUi7kNdL54dWc",
+						"type": "text"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "referer",
+						"value": "https://fineng-ui-qa.mysunpower.com/home/Lease%20Target%20Margin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"env\":\"QA\",\r\n\"table_name\":\"fmv\",\r\n\"mode\":\"Lease Target Margin\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fineng-ui-qa.mysunpower.com/all_table_data",
+					"protocol": "https",
+					"host": [
+						"fineng-ui-qa",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						"all_table_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fineng Lease Target Margin FMV Table QA Compare to Dev",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "ImM3MTdlMzJlODE1NWQ3Y2E3ZjVlMDQ0NWEyMzlkYWI4YjE4MzRhZWUi.YPG2Cw.B2594xVprPWE9wxYmRzZw8p4ZTc",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.2.1765621744.1602178315; mp_CHATBOT_MIXPANEL_TOKEN_mixpanel=%7B%22distinct_id%22%3A%20%22anonymous202413114%22%2C%22%24device_id%22%3A%20%2217a7c5933bf8d0-04f7f423488a8a-6373264-100200-17a7c5933c097d%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22%24user_id%22%3A%20%22anonymous202413114%22%7D; intercom-session-vcj0ef1j=TTBLc3RublVFUlV2S1YvMHRLRTNxVVNsTnBIcXl1b2lkekFEUlJhWWxGdllSaExFdzBOWDZOWkwweFk4dmlsdi0tMU1UOEQzcURrRHVIOUpKa0RSeVk1QT09--8aa45bccf6fa7d75a18f5858997a058b876bfb4c; intercom-session-zjhabkm5=emJzc3Uxc28zL2NGZldnbi9hTGh5OUZscy92dDI1ODVvU3dJK1dBc3FRaGhDNG9qZDJJL0lWSUFOSXBVd2hzMi0tZTJZMmxEZjNGeHROM0p4YXR3dis2dz09--edc4df56ac9cf9fcc20c2aff9b155068c6fedf17; mp_YOUR_MIXPANEL_TOKEN_mixpanel=%7B%22distinct_id%22%3A%2058%2C%22%24device_id%22%3A%20%2217579bd127ab1-01d42677099dfb-303464-100200-17579bd127b211%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22%24user_id%22%3A%2058%7D; session=.eJw1zMsNgCAMANBdevaAVL7LECzFGBUNwsm4uyffAO-BcHE9YuHSwLfaeQC6aw7t3LiAB6cy6SyzjISEKISJxgqDzI6EmlGOia02EQbYz2Utf9JvrmFN4Cf3fo76H_E.YPHA-w.RgsNg6PJiJrr9J-v8yBpc0Pplxg",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://fineng-ui-qa.mysunpower.com/home/Lease%20Target%20Margin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"env\":\"DEV\",\"table_name\":\"fmv\",\"mode\":\"Lease Target Margin\",\"data\":[[\"Solar\",20,30,\"California\",5.921181700718],[\"Solar\",20,30,\"Colorado\",5.15],[\"Solar\",20,30,\"Connecticut\",4.983913694361],[\"Solar\",20,30,\"Illinois\",4.593301140956],[\"Solar\",20,30,\"Maryland\",4.343999403297],[\"Solar\",20,30,\"Massachusetts\",6],[\"Solar\",20,30,\"Nevada\",4.507077228706],[\"Solar\",20,26,\"California\",5.921181700718],[\"Solar\",20,26,\"Colorado\",4.904179408767],[\"Solar\",20,26,\"Connecticut\",4.651528988217],[\"Solar\",20,26,\"Illinois\",4.286252323144],[\"Solar\",20,26,\"Maryland\",4.056090102185],[\"Solar\",20,26,\"Massachusetts\",6],[\"Solar\",20,26,\"Nevada\",4.224473931398],[\"Solar\",25,30,\"Arizona\",4.97],[\"Solar\",25,30,\"California\",5.921181700718],[\"Solar\",25,30,\"Colorado\",5.15],[\"Solar\",25,30,\"Connecticut\",5.042405975051],[\"Solar\",25,30,\"Florida\",4.12093495935],[\"Solar\",25,30,\"Hawaii\",6.714933982345],[\"Solar\",25,30,\"Maryland\",4.310186221128],[\"Solar\",25,30,\"Massachusetts\",6],[\"Solar\",25,30,\"New Jersey\",5.63869101387],[\"Solar\",25,30,\"New York\",5.7],[\"Solar\",25,30,\"Nevada\",4.566189093186],[\"Solar\",25,30,\"Rhode Island\",5.533150676553],[\"Solar\",25,26,\"Arizona\",4.97],[\"Solar\",25,26,\"California\",5.921181700718],[\"Solar\",25,26,\"Colorado\",5.118246687054],[\"Solar\",25,26,\"Connecticut\",4.705379024408],[\"Solar\",25,26,\"Florida\",3.854674796748],[\"Solar\",25,26,\"Hawaii\",6.714933982345],[\"Solar\",25,26,\"Maryland\",4.023768678054],[\"Solar\",25,26,\"Massachusetts\",6],[\"Solar\",25,26,\"New Jersey\",5.263146460546],[\"Solar\",25,26,\"New York\",5.7],[\"Solar\",25,26,\"Nevada\",4.279537038037],[\"Solar\",25,26,\"Rhode Island\",5.533150676553],[\"Solar + SunVault 13\",20,30,\"California\",9.210687033125],[\"Solar + SunVault 13\",20,30,\"Colorado\",6.64627930683],[\"Solar + SunVault 13\",20,30,\"Connecticut\",6.397012919924],[\"Solar + SunVault 13\",20,30,\"Illinois\",6.520125706174],[\"Solar + SunVault 13\",20,30,\"Maryland\",5.185350936078],[\"Solar + SunVault 13\",20,30,\"Massachusetts\",8.087924124368],[\"Solar + SunVault 13\",20,30,\"Nevada\",5.704699798102],[\"Solar + SunVault 13\",20,26,\"California\",8.598302738692],[\"Solar + SunVault 13\",20,26,\"Colorado\",6.217125382263],[\"Solar + SunVault 13\",20,26,\"Connecticut\",5.971783323795],[\"Solar + SunVault 13\",20,26,\"Illinois\",6.083793175599],[\"Solar + SunVault 13\",20,26,\"Maryland\",4.841749334925],[\"Solar + SunVault 13\",20,26,\"Massachusetts\",7.553583430833],[\"Solar + SunVault 13\",20,26,\"Nevada\",5.347599356517],[\"Solar + SunVault 13\",25,30,\"Arizona\",7.073205757113],[\"Solar + SunVault 13\",25,30,\"California\",9.499077311317],[\"Solar + SunVault 13\",25,30,\"Colorado\",7.236493374108],[\"Solar + SunVault 13\",25,30,\"Connecticut\",6.838954596249],[\"Solar + SunVault 13\",25,30,\"Florida\",6.061991869919],[\"Solar + SunVault 13\",25,30,\"Hawaii\",9.579383523629],[\"Solar + SunVault 13\",25,30,\"Maryland\",5.358892121031],[\"Solar + SunVault 13\",25,30,\"Massachusetts\",8.518256951532],[\"Solar + SunVault 13\",25,30,\"Nevada\",6.089331793006],[\"Solar + SunVault 13\",25,30,\"New Jersey\",7.499845638428],[\"Solar + SunVault 13\",25,30,\"New York\",8.582598102879],[\"Solar + SunVault 13\",25,30,\"Rhode Island\",8.030950676553],[\"Solar + SunVault 13\",25,26,\"Arizona\",6.910204411899],[\"Solar + SunVault 13\",25,26,\"California\",8.865330774056],[\"Solar + SunVault 13\",25,26,\"Colorado\",6.768603465851],[\"Solar + SunVault 13\",25,26,\"Connecticut\",6.383086186426],[\"Solar + SunVault 13\",25,26,\"Florida\",5.670731707317],[\"Solar + SunVault 13\",25,26,\"Hawaii\",9.579383523629],[\"Solar + SunVault 13\",25,26,\"Maryland\",5.003356455583],[\"Solar + SunVault 13\",25,26,\"Massachusetts\",7.996066814369],[\"Solar + SunVault 13\",25,26,\"Nevada\",5.707938804375],[\"Solar + SunVault 13\",25,26,\"New Jersey\",6.99911956733],[\"Solar + SunVault 13\",25,26,\"New York\",8.191224580381],[\"Solar + SunVault 13\",25,26,\"Rhode Island\",7.651111111111],[\"Solar + SunVault 26\",20,30,\"California\",11.120827579423],[\"Solar + SunVault 26\",20,30,\"Colorado\",7.338430173293],[\"Solar + SunVault 26\",20,30,\"Connecticut\",7.028358171817],[\"Solar + SunVault 26\",20,30,\"Illinois\",7.413923681911],[\"Solar + SunVault 26\",20,30,\"Maryland\",5.556301434574],[\"Solar + SunVault 26\",20,30,\"Massachusetts\",8.788056060342],[\"Solar + SunVault 26\",20,30,\"Nevada\",6.226989559603],[\"Solar + SunVault 26\",20,26,\"California\",10.380269828016],[\"Solar + SunVault 26\",20,26,\"Colorado\",6.865443425076],[\"Solar + SunVault 26\",20,26,\"Connecticut\",6.560419926296],[\"Solar + SunVault 26\",20,26,\"Illinois\",6.917921745445],[\"Solar + SunVault 26\",20,26,\"Maryland\",5.188831704831],[\"Solar + SunVault 26\",20,26,\"Massachusetts\",8.207786711807],[\"Solar + SunVault 26\",20,26,\"Nevada\",5.83749905529],[\"Solar + SunVault 26\",25,30,\"Arizona\",7.867233713297],[\"Solar + SunVault 26\",25,30,\"California\",11.433922085183],[\"Solar + SunVault 26\",25,30,\"Colorado\",8.097859327217],[\"Solar + SunVault 26\",25,30,\"Connecticut\",7.634635303415],[\"Solar + SunVault 26\",25,30,\"Florida\",6.918699186992],[\"Solar + SunVault 26\",25,30,\"Hawaii\",10.660805541978],[\"Solar + SunVault 26\",25,30,\"Maryland\",5.818850849059],[\"Solar + SunVault 26\",25,30,\"Massachusetts\",9.427696597048],[\"Solar + SunVault 26\",25,30,\"Nevada\",6.749279321104],[\"Solar + SunVault 26\",25,30,\"New Jersey\",8.286832386201],[\"Solar + SunVault 26\",25,30,\"New York\",9.670871788127],[\"Solar + SunVault 26\",25,30,\"Rhode Island\",8.973950676553],[\"Solar + SunVault 26\",25,26,\"Arizona\",7.770939323752],[\"Solar + SunVault 26\",25,26,\"California\",10.958830571302],[\"Solar + SunVault 26\",25,26,\"Colorado\",7.573904179409],[\"Solar + SunVault 26\",25,26,\"Connecticut\",7.124916857401],[\"Solar + SunVault 26\",25,26,\"Florida\",6.471544715447],[\"Solar + SunVault 26\",25,26,\"Hawaii\",10.660805541978],[\"Solar + SunVault 26\",25,26,\"Maryland\",5.432485517516],[\"Solar + SunVault 26\",25,26,\"Massachusetts\",8.803739015708],[\"Solar + SunVault 26\",25,26,\"Nevada\",6.326589002494],[\"Solar + SunVault 26\",25,26,\"New Jersey\",7.733640531919],[\"Solar + SunVault 26\",25,26,\"New York\",9.217051077611],[\"Solar + SunVault 26\",25,26,\"Rhode Island\",8.527777777778]],\"columns\":[{\"api\":\"storage_product\",\"column_name_in_db\":\"system_config\",\"is_dropdown\":1,\"is_none\":0,\"label\":\"System Config\",\"possible_values\":0,\"tooltip\":\"System Config\",\"type\":\"string\"},{\"api\":0,\"column_name_in_db\":\"term\",\"is_dropdown\":0,\"is_none\":0,\"label\":\"Term\",\"possible_values\":[20,25],\"tooltip\":\"values should be integer\",\"type\":\"int\"},{\"api\":0,\"column_name_in_db\":\"itc\",\"is_dropdown\":0,\"is_none\":0,\"label\":\"ITC %\",\"possible_values\":0,\"tooltip\":\"values should be integer like 30\",\"type\":\"int\"},{\"api\":\"state\",\"column_name_in_db\":\"state\",\"is_dropdown\":1,\"is_none\":0,\"label\":\"State\",\"possible_values\":0,\"tooltip\":\"values should be selected from dropdown\",\"type\":\"string\"},{\"api\":0,\"column_name_in_db\":\"fmv\",\"is_dropdown\":0,\"is_none\":0,\"label\":\"FMV\",\"possible_values\":0,\"tooltip\":\"Fair market Value\",\"type\":\"float\"}]}"
+				},
+				"url": {
+					"raw": "https://fineng-ui-qa.mysunpower.com/compare",
+					"protocol": "https",
+					"host": [
+						"fineng-ui-qa",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						"compare"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

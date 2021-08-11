@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "a3fcde31-759d-439f-b5a5-4d64e2ce71b1",
+		"name": "00 - Fineng Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quote NHL 2.0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n  <abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <username>spquote</username>  <password>qq101010</password>  <version>2</version>  <batch id=\"1\">  \r\n\t<inputcommand name=\"APIInput\">\r\n\t<input name=\"ACP\">0.235</input>\r\n\t<input name=\"Utility ID\">2885</input>\r\n\t<input name=\"New Home Community ID\">20</input>\r\n\t<input name=\"Year 1 Production\">70</input>\r\n\t\r\n\t<input name=\"Quote ID\">123456</input>\r\n\t<input name=\"Timestamp\">2015-09-27T00:00:00.000-0500</input>\r\n\t<input name=\"Business Sector\">New Homes</input>\r\n\t<input name=\"Channel\">Direct</input>\r\n\t<input name=\"Financial Option\">lease</input>\r\n\t<input name=\"State Abbreviation\">CO</input>\r\n\t<input name=\"Utility\">PGE</input>\r\n\t<input name=\"Dealer\">Any Dealer</input>\r\n\t<input name=\"Dealer ID\">0018000000prb4aAAA</input>\r\n\t<input name=\"Dealer Oracle ID\">45678</input>\r\n\t<input name=\"Dealer Fee\">12750</input>\r\n\t<input name=\"System Size\">5.0</input>\r\n\t<input name=\"Pricing Cost\">24474.3</input>\r\n\t<input name=\"State Rebate\">0.0</input>\r\n\t<input name=\"Down Payment\">0.0</input>\r\n\t<input name=\"Escalator Rate\">0.0</input>\r\n\t<input name=\"Net Avoided Rate\">0.154758</input>\r\n\t<input name=\"Inverter\">\r\n\t\t<item name=\"Inverter Name\">SMA sunny Boy</item>\r\n\t\t<item name=\"Inverter ID\">5678</item>\r\n\t\t<item name=\"Inverter Quantity\">3</item>\r\n\t</input>\r\n\t<input name=\"Inverter\">\r\n\t\t<item name=\"Inverter Name\">another</item>\r\n\t\t<item name=\"Inverter ID\">567999</item>\r\n\t\t<item name=\"Inverter Quantity\">1</item>\r\n\t</input>\r\n\t<input name=\"Panel Type\">dc</input>\r\n\t<input name=\"PVModel Name\">327W WHT</input>\r\n\t<input name=\"PVModel\">513803</input>\r\n\t<input name=\"NumberOfModules\">12</input>\r\n\t<input name=\"NEM2 Identifier\">0</input>\r\n\t<input name=\"Monthly Bill Before\">100.7</input>\r\n\t<input name=\"Monthly Bill After\">50.8</input>\r\n        </inputcommand>\r\n\t<outputcommand name=\"APIOutput\"><outputoption></outputoption></outputcommand>\r\n\t</batch>\r\n\t</abc>"
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				},
+				"description": "This is a quoting request for DEV "
+			},
+			"response": []
+		},
+		{
+			"name": "Quote NHL 2.0 Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<version>2</version>\n<batch id=\"1\">\n<inputcommand name=\"APIInput\">\n<input name=\"System Price\">22050.0</input>\n<input name=\"Pricing Cost\">24159.61</input>\n<input name=\"Dealer Fee\">7350.0</input>\n<input name=\"NumberOfModules\">21</input>\n<input name=\"State Rebate\">0.0</input>\n<input name=\"System Size\">7.35</input>\n<input name=\"Year 1 Production\">8470</input>\n<input name=\"Monthly Bill Before\">300</input>\n<input name=\"Monthly Bill After\">75</input>\n<input name=\"State Incentive Year 1\">0</input>\n<input name=\"State Incentive Year 2\">0</input>\n<input name=\"State Incentive Year 3\">0</input>\n<input name=\"State Incentive Year 4\">0</input>\n<input name=\"State Incentive Year 5\">0</input>\n<input name=\"State Incentive Year 6\">0</input>\n<input name=\"State Incentive Year 7\">0</input>\n<input name=\"State Incentive Year 8\">0</input>\n<input name=\"State Incentive Year 9\">0</input>\n<input name=\"State Incentive Year 10\">0</input>\n<input name=\"State Incentive Year 11\">0</input>\n<input name=\"State Incentive Year 12\">0</input>\n<input name=\"State Incentive Year 13\">0</input>\n<input name=\"State Incentive Year 14\">0</input>\n<input name=\"State Incentive Year 15\">0</input>\n<input name=\"State Incentive Year 16\">0</input>\n<input name=\"State Incentive Year 17\">0</input>\n<input name=\"State Incentive Year 18\">0</input>\n<input name=\"State Incentive Year 19\">0</input>\n<input name=\"State Incentive Year 20\">0</input>\n<input name=\"State Abbreviation\">CA</input>\n<input name=\"Utility\">Pacific Gas and Electric Company</input>\n<input name=\"Utility ID\">734</input>\n<input name=\"Dealer\"/>\n<input name=\"Dealer ID\">0013400001VXouaAAD</input>\n<input name=\"Dealer Oracle ID\"/>\n<input name=\"Channel\">Direct</input>\n<input name=\"Business Sector\">New Homes</input>\n<input name=\"Panel Type\">ac</input>\n<input name=\"PVModel\">526615</input>\n<input name=\"PVModel Name\">PVM, SPR-X21-350-BLK-E-AC, AR-S6 M5 B2 166A</input>\n<input name=\"NEM2 Identifier\">0</input>\n<input name=\"Quote ID\">0Q0180000003EEyCAM</input>\n<input name=\"Timestamp\">2019-07-23T13:49:58Z</input>\n<input name=\"Financial Option\">lease</input>\n<input name=\"Down Payment\">0.0</input>\n<input name=\"Escalator Rate\">2.0</input>\n<input name=\"Cell Monitoring Term\"/>\n<input name=\"Cell Monitoring Cost\"/>\n<input name=\"Inverter\">\n<item name=\"Inverter Name\">ENPHASE IQ7XS MICROINVERTER</item>\n<item name=\"Inverter ID\">531549</item>\n<item name=\"Inverter Quantity\">21</item>\n</input>\n<input name=\"Builder\">Gabi NHBuilderTest</input>\n<input name=\"Builder Division\">N.CA-Central Valley</input>\n<input name=\"NewHomeCommunity\">DoNotUse GabiNH Community</input>\n<input name=\"NewHomeCommunityID\">C001205</input>\n<input name=\"Available In Loan\">false</input>\n<input name=\"Net Avoided Rate\">0.312477</input>\n<input name=\"Racking Type\">Invisimount</input>\n</inputcommand>\n<outputcommand name=\"APIOutput\">\n<outputoption/>\n</outputcommand>\n</batch>\n</abc>"
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				},
+				"description": "This is a quoting request for DEV "
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Lease 2.0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<version>2</version>\n<batch id=\"1\">\n<inputcommand name=\"APIInput\">\n<input name=\"System Price\">38880.0</input>\n<input name=\"Pricing Cost\">36388.1</input>\n<input name=\"Dealer Fee\">13996.8</input>\n<input name=\"NumberOfModules\">36</input>\n<input name=\"State Rebate\">0.0</input>\n<input name=\"System Size\">12.96</input>\n<input name=\"Year 1 Production\">10381</input>\n<input name=\"Monthly Bill Before\">343</input>\n<input name=\"Monthly Bill After\">205</input>\n<input name=\"State Incentive Year 1\">0</input>\n<input name=\"State Incentive Year 2\">0</input>\n<input name=\"State Incentive Year 3\">0</input>\n<input name=\"State Incentive Year 4\">0</input>\n<input name=\"State Incentive Year 5\">0</input>\n<input name=\"State Incentive Year 6\">0</input>\n<input name=\"State Incentive Year 7\">0</input>\n<input name=\"State Incentive Year 8\">0</input>\n<input name=\"State Incentive Year 9\">0</input>\n<input name=\"State Incentive Year 10\">0</input>\n<input name=\"State Incentive Year 11\">0</input>\n<input name=\"State Incentive Year 12\">0</input>\n<input name=\"State Incentive Year 13\">0</input>\n<input name=\"State Incentive Year 14\">0</input>\n<input name=\"State Incentive Year 15\">0</input>\n<input name=\"State Incentive Year 16\">0</input>\n<input name=\"State Incentive Year 17\">0</input>\n<input name=\"State Incentive Year 18\">0</input>\n<input name=\"State Incentive Year 19\">0</input>\n<input name=\"State Incentive Year 20\">0</input>\n<input name=\"State Abbreviation\">NJ</input>\n<input name=\"Utility\">Jersey Central Power  Lt Co</input>\n<input name=\"Utility ID\">3111</input>\n<input name=\"Dealer\"/>\n<input name=\"Dealer ID\">0013400001XFxR6AAL</input>\n<input name=\"Dealer Oracle ID\">144228</input>\n<input name=\"Channel\">Indirect</input>\n<input name=\"Business Sector\">Residential</input>\n<input name=\"Panel Type\">dc</input>\n<input name=\"PVModel\">517535</input>\n<input name=\"PVModel Name\">PVM, SPR-X22-360, C2C AR-S6 M5 B1 YUK</input>\n<input name=\"NEM2 Identifier\">0</input>\n<input name=\"Quote ID\">0Q034000002UW0PCAW</input>\n<input name=\"Timestamp\">2019-02-01T17:33:52Z</input>\n<input name=\"Financial Option\">lease</input>\n<input name=\"Down Payment\">0.0</input>\n<input name=\"Escalator Rate\">0.0</input>\n<input name=\"Cell Monitoring Term\"/>\n<input name=\"Cell Monitoring Cost\"/>\n<input name=\"Inverter\">\n<item name=\"Inverter Name\">\n6.0 kW (Model SUNNY BOY 6.0-1SP-US-40 - 240v (SPR-6003m))\n</item>\n<item name=\"Inverter ID\">518529</item>\n<item name=\"Inverter Quantity\">1</item>\n</input>\n<input name=\"Available In Loan\">false</input>\n<input name=\"Net Avoided Rate\">0.154758</input>\n<input name=\"Racking Type\">non-sunpower Racking</input>\n</inputcommand>\n<outputcommand name=\"APIOutput\">\n<outputoption/>\n</outputcommand>\n</batch>\n</abc>"
+				},
+				"url": {
+					"raw": "http://{{url}}/api/price",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote PPA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\"?><abc xmlns=\"http://www.warren-selbert.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><username>spquote</username><password>qq101010</password><version>2</version><batch id=\"1\"><inputcommand name=\"APIInput\"><input name=\"Quote ID\">0Q034000002aJ5jCAE</input><input name=\"Utility\">Southern California Edison (SCE)</input><input name=\"Utility ID\"></input><input name=\"Investment Type\">Unrated Investment Grade</input><input name=\"Site Count\">1</input><input name=\"PPA Esc\">0</input><input name=\"PPA Term\">20</input><input name=\"DF\">107457</input><input name=\"Utility Escalation\">0.03</input><input name=\"Avoided Utility Cost\">0.137</input><input name=\"Upfront Rebate\">0</input><input name=\"PBI Amount\">0</input><input name=\"PBI Term\">0</input><input name=\"ITC Ineligibility\">0.00</input><input name=\"Suppress SREC\">0</input><input name=\"State Abbreviation\">CA</input><input name=\"COD\">2018-05-01T00:00:00.000-0700</input><input name=\"Dealer\">Renova Energy Corp.</input><input name=\"Dealer ID\">0018000000ppk90AAA</input><input name=\"Year 1 Production Jan\">26665.29530885</input><input name=\"Year 1 Production Feb\">27272.04876937</input><input name=\"Year 1 Production Mar\">36599.12454568</input><input name=\"Year 1 Production Apr\">39564.52537571</input><input name=\"Year 1 Production May\">42962.86271378</input><input name=\"Year 1 Production Jun\">41349.36513857</input><input name=\"Year 1 Production Jul\">38100.31058745</input><input name=\"Year 1 Production Aug\">35733.37595799</input><input name=\"Year 1 Production Sep\">32193.78130869</input><input name=\"Year 1 Production Oct\">31732.25677586</input><input name=\"Year 1 Production Nov\">26660.52037851</input><input name=\"Year 1 Production Dec\">25106.09572325</input><input name=\"System Commissioning\">5000.00</input><input name=\"Timestamp\">2018-01-26T13:29:28.410-0800</input><input name=\"Business Sector\">Commercial</input><input name=\"Channel\">Indirect</input><input name=\"Financial Option\">ppa</input><input name=\"Item\"><!--Design Id: a1434000003ZicfAAC Design Name: D-0087353--><!--Cost Matrix Id: a82340000008WsqAAE Cost Matrix Name: BOS-0009--><!--Product Id: 01t340000042b2xAAA Product Name: Q218-SPR-P17-350-COM-US--><item name=\"Material Cost\">0.500</item><item name=\"Labor Cost\">0.500</item><item name=\"Acct/Misc\">0.087</item><item name=\"Type\">Carport</item><item name=\"Panel Name\">SPR-P17-350-COM</item><item name=\"Panel Quantity\">602</item><item name=\"Size\">350</item><item name=\"Panel Cost\">0.390902494</item></input></inputcommand><outputcommand name=\"APIOutput\"><outputoption>option1</outputoption><outputoption>option2</outputoption></outputcommand></batch></abc>"
+				},
+				"url": {
+					"raw": "http://{{url}}/api/price",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Loan 2.0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n<version>2</version>\r\n<batch id=\"1\">\r\n<inputcommand name=\"APIInput\">\r\n<input name=\"Price per kWh\">0</input>\r\n<input name=\"System Price\">29600.0</input>\r\n<input name=\"Pricing Cost\">32908.32</input>\r\n<input name=\"Dealer Fee\">14800.0</input>\r\n<input name=\"NumberOfModules\">20</input>\r\n<input name=\"Loan State Rebate\">0.0</input>\r\n<input name=\"System Size\">7.4</input>\r\n<input name=\"Year 1 Production\">13039</input>\r\n<input name=\"Monthly Bill Before\">331</input>\r\n<input name=\"Monthly Bill After\">93</input>\r\n<input name=\"Loan State Incentive Year 1\">0</input>\r\n<input name=\"Loan State Incentive Year 2\">0</input>\r\n<input name=\"Loan State Incentive Year 3\">0</input>\r\n<input name=\"Loan State Incentive Year 4\">0</input>\r\n<input name=\"Loan State Incentive Year 5\">0</input>\r\n<input name=\"Loan State Incentive Year 6\">0</input>\r\n<input name=\"Loan State Incentive Year 7\">0</input>\r\n<input name=\"Loan State Incentive Year 8\">0</input>\r\n<input name=\"Loan State Incentive Year 9\">0</input>\r\n<input name=\"Loan State Incentive Year 10\">0</input>\r\n<input name=\"Loan State Incentive Year 11\">0</input>\r\n<input name=\"Loan State Incentive Year 12\">0</input>\r\n<input name=\"Loan State Incentive Year 13\">0</input>\r\n<input name=\"Loan State Incentive Year 14\">0</input>\r\n<input name=\"Loan State Incentive Year 15\">0</input>\r\n<input name=\"Loan State Incentive Year 16\">0</input>\r\n<input name=\"Loan State Incentive Year 17\">0</input>\r\n<input name=\"Loan State Incentive Year 18\">0</input>\r\n<input name=\"Loan State Incentive Year 19\">0</input>\r\n<input name=\"Loan State Incentive Year 20\">0</input>\r\n<input name=\"State Abbreviation\">CA</input>\r\n<input name=\"Utility\">Southern California Edison Co</input>\r\n<input name=\"Utility ID\">1228</input>\r\n<input name=\"Dealer\"/>\r\n<input name=\"Dealer ID\">0018000000UqMSFAA3</input>\r\n<input name=\"Dealer Oracle ID\">25633</input>\r\n<input name=\"Channel\">Indirect</input>\r\n<input name=\"Business Sector\">Residential</input>\r\n<input name=\"Panel Type\">ac</input>\r\n<input name=\"PVModel\">530020</input>\r\n<input name=\"PVModel Name\">PVM, SPR-X22-370-E-AC, AR-F1 M5 B1 166A</input>\r\n<input name=\"NEM2 Identifier\">0</input>\r\n<input name=\"Quote ID\">0Q03K000000AI2FSAW</input>\r\n<input name=\"Timestamp\">2020-04-09T00:23:56Z</input>\r\n<input name=\"Financial Option\">loan</input>\r\n<input name=\"Number of Systems\">1</input>\r\n<input name=\"Approved Financed Amount\">70000.0</input>\r\n<input name=\"Loan Down Payment\">0.0</input>\r\n<input name=\"Loan Tenor\">20.0</input>\r\n<input name=\"Loan Start Date\">2020-07-08</input>\r\n<input name=\"ITC Amount\">0.26</input>\r\n<input name=\"Loan Provider\">TCU</input>\r\n<input name=\"Credit Product Name\">TCU 4.20 25.599.26</input>\r\n<input name=\"Cell Monitoring Term\"/>\r\n<input name=\"Cell Monitoring Cost\"/>\r\n<input name=\"Inverter\">\r\n<item name=\"Inverter Name\">ENPHASE IQ7XS MICROINVERTER</item>\r\n<item name=\"Inverter ID\">531549</item>\r\n<item name=\"Inverter Quantity\">20</item>\r\n</input>\r\n<input name=\"Storage\">false</input>\r\n<input name=\"Equinox Storage\">false</input>\r\n<input name=\"Available In Loan\">true</input>\r\n<input name=\"Net Avoided Rate\">0.215116</input>\r\n<input name=\"Racking Type\">Invisimount</input>\r\n</inputcommand>\r\n<outputcommand name=\"APIOutput\">\r\n<outputoption/>\r\n</outputcommand>\r\n</batch>\r\n</abc>"
+				},
+				"url": {
+					"raw": "http://fineng-uat.mysunpower.com/api/price ",
+					"protocol": "http",
+					"host": [
+						"fineng-uat",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						"api",
+						"price "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debug Loan Price",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "qa1vMo2hmJjJ3kdo4WKrFCd9d9TEE+2KSQwPDS+y6qs="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Channel\": \"Indirect\",\n\t\"State\": \"CA\",\n\t\"PVModel\": 517532,\n\t\"Utility ID\": \"1071\",\n\t\"Dealer ID\": \"0013400001MiStBAAV\"\n}"
+				},
+				"url": {
+					"raw": "{{worker}}/api/debug_loan_price",
+					"host": [
+						"{{worker}}"
+					],
+					"path": [
+						"api",
+						"debug_loan_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debug Lease Price",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "qa1vMo2hmJjJ3kdo4WKrFCd9d9TEE+2KSQwPDS+y6qs="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Channel\": \"Indirect\",\n\t\"State\": \"MA\",\n\t\"PVModel\": 514625.0,\n\t\"Utility ID\": \"xxx\",\n\t\"Dealer ID\": \"xxx\"\n}"
+				},
+				"url": {
+					"raw": "{{worker}}/api/debug_lease_price",
+					"host": [
+						"{{worker}}"
+					],
+					"path": [
+						"api",
+						"debug_lease_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Cash 2.0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <version>2</version>\r\n    <batch id=\"1\">\r\n    <inputcommand name=\"APIInput\">\r\n    <input name=\"Channel\">Indirect</input>\r\n    <input name=\"State Abbreviation\">CA</input>\r\n    <input name=\"Utility ID\">xxx</input>\r\n    <input name=\"Dealer ID\">0018000000UqMMpAAN</input>\r\n    <input name=\"Available In Loan\">false</input>\r\n    <input name=\"Dealer Fee\">30000</input>\r\n    <input name=\"NumberOfModules\">10</input>\r\n    <input name=\"System Size\">3</input>\r\n    <input name=\"Year 1 Production\">12598</input>\r\n    <input name=\"Utility\">test</input>\r\n    <input name=\"Dealer\">test</input>\r\n    <input name=\"Dealer Oracle ID\">74089</input>\r\n    <input name=\"Business Sector\">Residential</input>\r\n    <input name=\"Panel Type\">ac</input>\r\n    <input name=\"PVModel\">517532</input>\r\n    <input name=\"Quote ID\">test</input>\r\n    <input name=\"Timestamp\"></input>\r\n    <input name=\"Financial Option\">spwr cash</input>\r\n    <input name=\"Inverter\">\r\n        <item name=\"Inverter Name\">Microinverter-96 Cells (Model Type-D)</item>\r\n        <item name=\"Inverter ID\">518218</item>\r\n        <item name=\"Inverter Quantity\">20</item>\r\n    </input>\r\n    </inputcommand>\r\n    <outputcommand name=\"APIOutput\">\r\n    <outputoption/>\r\n    </outputcommand>\r\n    </batch>\r\n    </abc>"
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/api/healthcheck",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Min Pricing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<version>2</version>\n<batch id=\"1\">\n    <inputcommand name=\"APIInput\">\n        <input name=\"System Price\">23040</input>\n        <input name=\"System Size\">7.2</input>\n        <input name=\"State Abbreviation\">CA</input>\n        <input name=\"Channel\">Tps</input>\n        <input name=\"PVModel\">519066</input>\n        <input name=\"Business Sector\">Residential</input>\n        <input name=\"Financial Option\">lease</input>\n    </inputcommand>\n    <outputcommand name=\"APIOutput\">\n        <outputoption/>\n    </outputcommand>\n</batch>\n</abc>\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/min_price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"min_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Min Storage Pricing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<version>2</version>\n<batch id=\"1\">\n    <inputcommand name=\"APIInput\">\n<!--according to ticket descripttion https://www.pivotaltracker.com/story/show/166888830 -->\n    \t<input name=\"Channel\">indirect</input>\n<!-- Storage name -->\n        <input name=\"Storage Unit Name\">SPWR1</input>\n<!-- true or false -->\n        <input name=\"Backup\">true</input>\n<!-- inside or outside -->\n        <input name=\"Storage Location\">inside</input>\n    </inputcommand>\n    <outputcommand name=\"APIOutput\">\n        <outputoption/>\n    </outputcommand>\n</batch>\n</abc>\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/min_price/storage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"min_price",
+						"storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote IPA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns=\"http://www.warren-selbert.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <username>spquote</username>\n  <password>qq101010</password>\n  <version>2</version>\n  <batch id=\"1\">\n    <inputcommand name=\"APIInput\">\n\n      <input xmlns=\"\" name=\"Operation Date\">Dec 31, 2019</input>\n      <input xmlns=\"\" name=\"Storage\">yes</input>\n      <input xmlns=\"\" name=\"SGIP Step\">2</input>\n      <input xmlns=\"\" name=\"PV Cost\">0.5530</input>\n      <input xmlns=\"\" name=\"BOS Cost\">1.2</input>\n      <input xmlns=\"\" name=\"System Size DC\">1500</input>\n      <input xmlns=\"\" name=\"System Size AC\">1200</input>\n      <input xmlns=\"\" name=\"Year 1 Production Jan\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Feb\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Mar\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Apr\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production May\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Jun\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Jul\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Aug\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Sep\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Oct\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Nov\">200000</input>\n      <input xmlns=\"\" name=\"Year 1 Production Dec\">200000</input>\n      <input xmlns=\"\" name=\"Utility Esc\">0.03</input>\n      <input xmlns=\"\" name=\"Avoided Cost\">0.118</input>\n      <input xmlns=\"\" name=\"Customer Discount Rate\">.03</input>\n      <input xmlns=\"\" name=\"Term\">25</input>\n      <input xmlns=\"\" name=\"ITC Ineligible Expense\">0</input>\n      <input xmlns=\"\" name=\"Escalation\">0.00</input>\n      <input xmlns=\"\" name=\"Margin\">0.12</input>\n      <input xmlns=\"\" name=\"Customer Federal Rate\">0.21</input>\n      <input xmlns=\"\" name=\"State Tax Rate\">0.0884</input>\n      <input xmlns=\"\" name=\"OM Price\">15000</input>\n      <input xmlns=\"\" name=\"Investor Pegu Value\">2500</input>\n      <input xmlns=\"\" name=\"MM Cost 1\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 2\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 3\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 4\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 5\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 6\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 7\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 8\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 9\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 10\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 11\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 12\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 13\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 14\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 15\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 16\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 17\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 18\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 19\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 20\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 21\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 22\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 23\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 24\">1500</input>\n      <input xmlns=\"\" name=\"MM Cost 25\">1500</input>\n\n      <input xmlns=\"\" name=\"Storage Margin\">0.12</input>\n      <input xmlns=\"\" name=\"Storage Project Term\">15</input>\n      <input xmlns=\"\" name=\"Storage kW\">966</input>\n      <input xmlns=\"\" name=\"Storage kWh\">1800</input>\n      <input xmlns=\"\" name=\"Storage Hardware Cost\">1090651</input>\n      <input xmlns=\"\" name=\"Storage Removal Cost\">23625</input>\n      <input xmlns=\"\" name=\"Storage Monthly OM Cost YR 1\">581</input>\n      <input xmlns=\"\" name=\"Storage Monthly OM Cost YR 11\">844</input>\n      <input xmlns=\"\" name=\"Storage OM Margin\">0.1</input>\n      <input xmlns=\"\" name=\"Storage OM Escalator\">0.02</input>\n      <input xmlns=\"\" name=\"Storage Annual Savings\">75000</input>\n      <input xmlns=\"\" name=\"Storage Solve Mode\">PPA rate add-on</input>\n\n      <input xmlns=\"\" name=\"Optimization Type\">PPA from margin</input>\n      <input xmlns=\"\" name=\"Channel\">Direct</input>\n      <input xmlns=\"\" name=\"Business Sector\">Commercial</input>\n      <input xmlns=\"\" name=\"Financial Option\">IPA</input>\n      <input xmlns=\"\" name=\"Timestamp\">2019-01-16T09:32:38.313Z</input>\n      <input xmlns=\"\" name=\"IPA Financial Option\">PPA</input>\n      <input xmlns=\"\" name=\"Type\">Carport</input>\n      <input xmlns=\"\" name=\"Degradation Rate\">0.0025</input>\n    <input xmlns=\"\" name=\"debug\">false</input>\n    </inputcommand>\n    <outputcommand name=\"APIOutput\">\n        <outputoption>option1</outputoption>\n        <outputoption>option2</outputoption>\n    </outputcommand>\n  </batch>\n</abc>"
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote IPA (ipa server)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Financing Options\": \"IPA\",\n\t\"Business Sector\": \"Commercial\",\n\t\"Channel\": \"Direct\",\n\t\"Quote ID\": \"hm\",\n\t\"Timestamp\": \"who cares\",\n    \"debug\": \"false\",\n    \"Escalation\": 0,\n    \"Term\": 25,\n    \"Avoided Cost\": 0.118,\n    \"BOS Cost\": 1.9,\n    \"CBI Amount\": 0,\n    \"CBI Delay\": 0,\n    \"Customer Discount Rate\": 0.03,\n    \"Customer Federal Rate\": 0.21,\n    \"Customer Pegu Value\": 0,\n    \"Degradation Rate\": 0.0025,\n    \"ITC Ineligible Expense\": 0,\n    \"Investor Pegu Value\": 2500,\n    \"MM Cost 1\": 1441,\n    \"MM Cost 10\": 1881,\n    \"MM Cost 11\": 2712,\n    \"MM Cost 12\": 2838,\n    \"MM Cost 13\": 2974,\n    \"MM Cost 14\": 3119,\n    \"MM Cost 15\": 3273,\n    \"MM Cost 16\": 3436,\n    \"MM Cost 17\": 3608,\n    \"MM Cost 18\": 3788,\n    \"MM Cost 19\": 3977,\n    \"MM Cost 2\": 1485,\n    \"MM Cost 20\": 4174,\n    \"MM Cost 21\": 4378,\n    \"MM Cost 22\": 4591,\n    \"MM Cost 23\": 4811,\n    \"MM Cost 24\": 5038,\n    \"MM Cost 25\": 5297.466335061999,\n    \"MM Cost 3\": 1529,\n    \"MM Cost 4\": 1575,\n    \"MM Cost 5\": 1622,\n    \"MM Cost 6\": 1671,\n    \"MM Cost 7\": 1721,\n    \"MM Cost 8\": 1773,\n    \"MM Cost 9\": 1826,\n    \"Margin\": 0.12,\n    \"Number of Sites\": 1,\n    \"OM Margin\": 0,\n    \"OM Price\": 15000,\n    \"Operation Date\": \"6/29/2019\",\n    \"Optimization Type\": \"PPA from margin\",\n    \"PBI Rate\": 0,\n    \"PBI Term\": 25,\n    \"PV Cost\": 0.701572205665738,\n    \"Property Tax Rate\": 0,\n    \"REC Rate\": 0,\n    \"REC Term\": 25,\n    \"SGIP Step\": 2,\n    \"Site Lease Escalation\": 0,\n    \"State Tax Rate\": 0.0884,\n    \"Storage\": \"yes\",\n    \"Storage Annual Savings\": 58000,\n    \"Storage Hardware Cost\": 1090650.8746978417,\n    \"Storage Margin\": 0.12,\n    \"Storage Monthly OM Cost YR 1\": 580.8333333333334,\n    \"Storage Monthly OM Cost YR 11\": 843.5052152757727,\n    \"Storage OM Escalator\": 0.02,\n    \"Storage OM Margin\": 0.1,\n    \"Storage Project Term\": 15,\n    \"Storage Removal Cost\": 23625,\n    \"Storage Solve Mode\": \"PPA rate add-on\",\n    \"Storage kW\": 966,\n    \"Storage kWh\": 1800,\n    \"System Size DC\": 582.8,\n    \"Target PPA Rate\": 0,\n    \"Utility Esc\": 0.03,\n    \"Year 1 Production Apr\": 95904.67504157174,\n    \"Year 1 Production Aug\": 107773.36523090622,\n    \"Year 1 Production Dec\": 39198.31404276521,\n    \"Year 1 Production Feb\": 49573.271827625926,\n    \"Year 1 Production Jan\": 43554.61641993095,\n    \"Year 1 Production Jul\": 118578.62655659694,\n    \"Year 1 Production Jun\": 114894.71933233802,\n    \"Year 1 Production Mar\": 76663.27213143371,\n    \"Year 1 Production May\": 109162.12304654442,\n    \"Year 1 Production Nov\": 48449.61543617517,\n    \"Year 1 Production Oct\": 69730.57043071464,\n    \"Year 1 Production Sep\": 87305.35513499015\n}"
+				},
+				"url": {
+					"raw": "{{worker}}/api/us_price",
+					"host": [
+						"{{worker}}"
+					],
+					"path": [
+						"api",
+						"us_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Loan 2.0 + Storage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n<script/>\r\n<script/>\r\n<version>2</version>\r\n<batch id=\"1\">\r\n<inputcommand name=\"APIInput\">\r\n<input name=\"System Price\">18000.0</input>\r\n<input name=\"Pricing Cost\">19203.989999999998</input>\r\n<input name=\"Dealer Fee\">6000.0</input>\r\n<input name=\"NumberOfModules\">15</input>\r\n<input name=\"Loan State Rebate\">0.0</input>\r\n<input name=\"System Size\">6.0</input>\r\n<input name=\"Year 1 Production\">8831</input>\r\n<input name=\"Monthly Bill Before\">245</input>\r\n<input name=\"Monthly Bill After\">21</input>\r\n<input name=\"Loan State Incentive Year 1\">0</input>\r\n<input name=\"Loan State Incentive Year 2\">0</input>\r\n<input name=\"Loan State Incentive Year 3\">0</input>\r\n<input name=\"Loan State Incentive Year 4\">0</input>\r\n<input name=\"Loan State Incentive Year 5\">0</input>\r\n<input name=\"Loan State Incentive Year 6\">0</input>\r\n<input name=\"Loan State Incentive Year 7\">0</input>\r\n<input name=\"Loan State Incentive Year 8\">0</input>\r\n<input name=\"Loan State Incentive Year 9\">0</input>\r\n<input name=\"Loan State Incentive Year 10\">0</input>\r\n<input name=\"Loan State Incentive Year 11\">0</input>\r\n<input name=\"Loan State Incentive Year 12\">0</input>\r\n<input name=\"Loan State Incentive Year 13\">0</input>\r\n<input name=\"Loan State Incentive Year 14\">0</input>\r\n<input name=\"Loan State Incentive Year 15\">0</input>\r\n<input name=\"Loan State Incentive Year 16\">0</input>\r\n<input name=\"Loan State Incentive Year 17\">0</input>\r\n<input name=\"Loan State Incentive Year 18\">0</input>\r\n<input name=\"Loan State Incentive Year 19\">0</input>\r\n<input name=\"Loan State Incentive Year 20\">0</input>\r\n<input name=\"State Abbreviation\">CA</input>\r\n<input name=\"Utility\">PGE</input>\r\n<input name=\"Utility ID\">1071</input>\r\n<input name=\"Dealer\"/>\r\n<input name=\"Dealer ID\">0018000000v6FpPAAU</input>\r\n<input name=\"Dealer Oracle ID\">71476</input>\r\n<input name=\"Channel\">Indirect</input>\r\n<input name=\"Business Sector\">Residential</input>\r\n<input name=\"Panel Type\">ac</input>\r\n<input name=\"PVModel\">530111</input>\r\n<input name=\"PVModel Name\">PVM, SPR-A400-G-AC, AR-F1 M5.1 B1 P14</input>\r\n<input name=\"NEM2 Identifier\">0</input>\r\n<input name=\"Quote ID\">0Q0K0000000Ko0cKAC</input>\r\n<input name=\"Timestamp\">2019-10-22T02:15:31Z</input>\r\n<input name=\"Financial Option\">loan</input>\r\n<input name=\"Number of Systems\">1</input>\r\n<input name=\"Approved Financed Amount\">100000.0</input>\r\n<input name=\"Loan Down Payment\">0.0</input>\r\n<input name=\"Loan Tenor\">10.0</input>\r\n<input name=\"Loan Provider\">Mosaic</input>\r\n<input name=\"Credit Product Name\">PowerSwitch 2.1.3 10.399.L.S</input>\r\n<input name=\"Cell Monitoring Term\"/>\r\n<input name=\"Cell Monitoring Cost\"/>\r\n<input name=\"Inverter\">\r\n<item name=\"Inverter Name\">MICROINVERTER, ACPV, ENPHASE IQ7AS</item>\r\n<item name=\"Inverter ID\">531843</item>\r\n<item name=\"Inverter Quantity\">15</item>\r\n</input>\r\n<input name=\"Storage\">true</input>\r\n<input name=\"Storage Unit Name\">\r\nENERGY STORAGE SYSTEM, EQUINOX STORAGE, 13 OPEN LAYOUT\r\n</input>\r\n<input name=\"Storage Unit ID\">533373</input>\r\n<input name=\"Storage Unit Quantity\">1</input>\r\n<input name=\"Storage Unit Size\">0.0</input>\r\n<input name=\"SGIP\"/>\r\n<input name=\"Equinox Storage\">true</input>\r\n<input name=\"Equinox Storage Backup Oracle ID\">534164</input>\r\n<input name=\"Equinox Storage Location Oracle ID\">534162</input>\r\n<input name=\"Storage Backup Type\">1</input>\r\n<input name=\"Storage Location\">inside</input>\r\n<input name=\"SGIP Incentive\">0</input>\r\n<input name=\"Available In Loan\">true</input>\r\n<input name=\"Net Avoided Rate\">0.298477</input>\r\n<input name=\"Racking Type\">Invisimount</input>\r\n</inputcommand>\r\n<outputcommand name=\"APIOutput\">\r\n<outputoption/>\r\n</outputcommand>\r\n</batch>\r\n</abc>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Loan 2.0 + Storage + Oracle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n<script/>\r\n<script/>\r\n<version>2</version>\r\n<batch id=\"1\">\r\n<inputcommand name=\"APIInput\">\r\n<input name=\"System Price\">26586.0</input>\r\n<input name=\"Pricing Cost\">28158.65</input>\r\n<input name=\"Dealer Fee\">9786.0</input>\r\n<input name=\"NumberOfModules\">21</input>\r\n<input name=\"Loan State Rebate\">0.0</input>\r\n<input name=\"System Size\">8.4</input>\r\n<input name=\"Year 1 Production\">13094</input>\r\n<input name=\"Monthly Bill Before\">295</input>\r\n<input name=\"Monthly Bill After\">13</input>\r\n<input name=\"Loan State Incentive Year 1\">0</input>\r\n<input name=\"Loan State Incentive Year 2\">0</input>\r\n<input name=\"Loan State Incentive Year 3\">0</input>\r\n<input name=\"Loan State Incentive Year 4\">0</input>\r\n<input name=\"Loan State Incentive Year 5\">0</input>\r\n<input name=\"Loan State Incentive Year 6\">0</input>\r\n<input name=\"Loan State Incentive Year 7\">0</input>\r\n<input name=\"Loan State Incentive Year 8\">0</input>\r\n<input name=\"Loan State Incentive Year 9\">0</input>\r\n<input name=\"Loan State Incentive Year 10\">0</input>\r\n<input name=\"Loan State Incentive Year 11\">0</input>\r\n<input name=\"Loan State Incentive Year 12\">0</input>\r\n<input name=\"Loan State Incentive Year 13\">0</input>\r\n<input name=\"Loan State Incentive Year 14\">0</input>\r\n<input name=\"Loan State Incentive Year 15\">0</input>\r\n<input name=\"Loan State Incentive Year 16\">0</input>\r\n<input name=\"Loan State Incentive Year 17\">0</input>\r\n<input name=\"Loan State Incentive Year 18\">0</input>\r\n<input name=\"Loan State Incentive Year 19\">0</input>\r\n<input name=\"Loan State Incentive Year 20\">0</input>\r\n<input name=\"State Abbreviation\">CA</input>\r\n<input name=\"Utility\">PGE</input>\r\n<input name=\"Utility ID\">734</input>\r\n<input name=\"Dealer\"/>\r\n<input name=\"Dealer ID\">0018000000UqMSFAA3</input>\r\n<input name=\"Dealer Oracle ID\">25633</input>\r\n<input name=\"Channel\">Indirect</input>\r\n<input name=\"Business Sector\">Residential</input>\r\n<input name=\"Panel Type\">ac</input>\r\n<input name=\"PVModel\">530111</input>\r\n<input name=\"PVModel Name\">PVM, SPR-A400-G-AC, AR-F1 M5.1 B1 P14</input>\r\n<input name=\"NEM2 Identifier\">0</input>\r\n<input name=\"Quote ID\">0Q0K0000000PEvaKAG</input>\r\n<input name=\"Timestamp\">2019-12-03T04:24:01Z</input>\r\n<input name=\"Financial Option\">loan</input>\r\n<input name=\"Number of Systems\">1</input>\r\n<input name=\"Approved Financed Amount\">100000.0</input>\r\n<input name=\"Loan Down Payment\">0.0</input>\r\n<input name=\"Loan Tenor\">10.0</input>\r\n<input name=\"Loan Provider\">Mosaic</input>\r\n<input name=\"Credit Product Name\">PowerSwitch 2.1.3 10.399.L.S</input>\r\n<input name=\"Cell Monitoring Term\"/>\r\n<input name=\"Cell Monitoring Cost\"/>\r\n<input name=\"Inverter\">\r\n<item name=\"Inverter Name\">MICROINVERTER, ACPV, ENPHASE IQ7AS</item>\r\n<item name=\"Inverter ID\">531843</item>\r\n<item name=\"Inverter Quantity\">21</item>\r\n</input>\r\n<input name=\"Storage\">true</input>\r\n<input name=\"Storage Unit Name\">\r\nENERGY STORAGE SYSTEM, EQUINOX STORAGE 13, STANDARD\r\n</input>\r\n<input name=\"Storage Unit ID\">533368</input>\r\n<input name=\"Storage Unit Quantity\">1</input>\r\n<input name=\"Storage Unit Size\">13000.0</input>\r\n<input name=\"SGIP\"/>\r\n<input name=\"Storage Dealer Fee\">1250.0</input>\r\n<input name=\"Equinox Storage\">true</input>\r\n<input name=\"Equinox Storage Backup Oracle ID\"/>\r\n<input name=\"Equinox Storage Location Oracle ID\"/>\r\n<input name=\"Storage Backup Type\"/>\r\n<input name=\"Storage Location\"/>\r\n<input name=\"SGIP Incentive\">0</input>\r\n<input name=\"Available In Loan\">true</input>\r\n<input name=\"Net Avoided Rate\">0.253102</input>\r\n<input name=\"Racking Type\">Invisimount</input>\r\n</inputcommand>\r\n<outputcommand name=\"APIOutput\">\r\n<outputoption/>\r\n</outputcommand>\r\n</batch>\r\n</abc>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/price",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Lease 2.0 price per kWh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-ws-apikey",
+						"value": "{{X-ws-apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<abc xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n<version>2</version>\r\n<batch id=\"1\">\r\n<inputcommand name=\"APIInput\">\r\n<input name=\"Price per kWh\">0.15</input>\r\n<input name=\"System Price\">0</input>\r\n<input name=\"System Adders\">5000</input>\r\n<input name=\"System Discounts\">0</input>\r\n<input name=\"Pricing Cost\">18108.32</input>\r\n<input name=\"Equipment Cost\">18108.32</input>\r\n<input name=\"Dealer Fee\">0</input>\r\n<input name=\"NumberOfModules\">20</input>\r\n<input name=\"State Rebate\">0.0</input>\r\n<input name=\"System Size\">7.4</input>\r\n<input name=\"Year 1 Production\">13273</input>\r\n<input name=\"Monthly Bill Before\">341</input>\r\n<input name=\"Monthly Bill After\">38</input>\r\n<input name=\"State Incentive Year 1\">0</input>\r\n<input name=\"State Incentive Year 2\">0</input>\r\n<input name=\"State Incentive Year 3\">0</input>\r\n<input name=\"State Incentive Year 4\">0</input>\r\n<input name=\"State Incentive Year 5\">0</input>\r\n<input name=\"State Incentive Year 6\">0</input>\r\n<input name=\"State Incentive Year 7\">0</input>\r\n<input name=\"State Incentive Year 8\">0</input>\r\n<input name=\"State Incentive Year 9\">0</input>\r\n<input name=\"State Incentive Year 10\">0</input>\r\n<input name=\"State Incentive Year 11\">0</input>\r\n<input name=\"State Incentive Year 12\">0</input>\r\n<input name=\"State Incentive Year 13\">0</input>\r\n<input name=\"State Incentive Year 14\">0</input>\r\n<input name=\"State Incentive Year 15\">0</input>\r\n<input name=\"State Incentive Year 16\">0</input>\r\n<input name=\"State Incentive Year 17\">0</input>\r\n<input name=\"State Incentive Year 18\">0</input>\r\n<input name=\"State Incentive Year 19\">0</input>\r\n<input name=\"State Incentive Year 20\">0</input>\r\n<input name=\"State Abbreviation\">CA</input>\r\n<input name=\"Utility\">Pacific Gas &amp; Electric Co</input>\r\n<input name=\"Utility ID\">734</input>\r\n<input name=\"Dealer\"/>\r\n<input name=\"Dealer ID\">0013400001ScGA7AAN</input>\r\n<input name=\"Dealer Oracle ID\">148624</input>\r\n<input name=\"Channel\">TPS</input>\r\n<input name=\"Business Sector\">Residential</input>\r\n<input name=\"Panel Type\">ac</input>\r\n<input name=\"PVModel\">530020</input>\r\n<input name=\"PVModel Name\">PVM, SPR-X22-370-E-AC, AR-F1 M5 B1 166A</input>\r\n<input name=\"NEM2 Identifier\">0</input>\r\n<input name=\"Quote ID\">0Q03K000000A0NRSA0</input>\r\n<input name=\"Timestamp\">2020-02-21T00:16:52Z</input>\r\n<input name=\"Financial Option\">lease</input>\r\n<input name=\"Down Payment\">2000.0</input>\r\n<input name=\"Escalator Rate\">2.0</input>\r\n<input name=\"Cell Monitoring Term\"/>\r\n<input name=\"Cell Monitoring Cost\"/>\r\n<input name=\"Inverter\">\r\n<item name=\"Inverter Name\">ENPHASE IQ7XS MICROINVERTER</item>\r\n<item name=\"Inverter ID\">531549</item>\r\n<item name=\"Inverter Quantity\">20</item>\r\n</input>\r\n<input name=\"Available In Loan\">false</input>\r\n<input name=\"Net Avoided Rate\">0.268669</input>\r\n<input name=\"Racking Type\">Invisimount</input>\r\n</inputcommand>\r\n<outputcommand name=\"APIOutput\">\r\n<outputoption/>\r\n</outputcommand>\r\n</batch>\r\n</abc>"
+				},
+				"url": {
+					"raw": "http://fineng.mysunpower.com/api/price",
+					"protocol": "http",
+					"host": [
+						"fineng",
+						"mysunpower",
+						"com"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
