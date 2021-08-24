@@ -1,0 +1,164 @@
+*** Release Notes ***
+
+Lease
+    - LEASE COMPUTATION + PPI Scenario
+        - Price per Watt
+            - Lease price per watt
+            - Lease price per watt w/ adders and discount, override rebate and downpayment
+            - Lease price per watt w/ storage
+            - Lease price per watt w/ adders, discount, storage, override rebate, downpayment and storage 
+
+         - Price per kwh
+            - Lease price per watt
+            - Lease price per watt w/ adders and discount, override rebate and downpayment
+            - Lease price per watt w/ storage
+            - Lease price per watt w/ adders, discount, storage, override rebate, downpayment and storage 
+
+         - Dealer fee per Watt
+            - Lease price per watt
+            - Lease price per watt w/ adders and discount, override rebate and downpayment
+            - Lease price per watt w/ storage
+            - Lease price per watt w/ adders, discount, storage, override rebate, downpayment and storage 
+
+    - System Price returned in response should not include storage commission
+        - Lease + Indirect + KWH + storage Dealer comission 1000
+        - Lease + Indirect + watts + storage Dealer comission 1000
+        - Lease + Indirect + Dealer Commission per Watt + storage Dealer comission 1000
+        - Lease + Direct + kwh + storage Dealer comission 1000
+        - Lease + Direct + watts + storage Dealer comission 1000
+        - Lease + Direct + Dealer Commission per Watt + storage Dealer comission 1000
+        - Lease + TPS + kwh + storage Dealer comission 1000
+        - Lease + TPS + watts + storage Dealer comission 1000
+        - Lease + TPS + Dealer Commission per Watt + storage Dealer comission 1000
+
+    - "SYSTEM_CONFIG flag" is = 0 Copy 2
+        - Indirect +KWH
+        - Indirect +Watts
+        - Direct +KWH
+        - Direct +Watts
+        - TPS +KWH
+        - TPS +Watts
+   
+Loan
+    - NEW LOAN COMPUTATION
+        - Row 30
+        - Row 31
+        - Row 32
+        - Row 33
+        - Row 34
+        - Row 35
+        - Row 36
+        - Row 37
+        - Row 38
+        - Row 41
+        - Row 42
+        - Row 43
+        - Row 44
+        - Row 45
+        - Row 46
+        - Row 47
+
+    - Cash incentives
+        - Row 3
+        - Row 4
+        - Row 5
+        - Row 6
+        - Row 7
+        - Row 8
+        - Row 9
+        - Row 10
+        - Row 11
+        - Row 12
+        - Row 13
+        - Row 14
+        - Row 15
+        - Row 16
+        - Row 17
+        - Row 18
+        - Row 19
+        - Row 20
+        - Row 21
+        - Row 22
+        - Row 23
+        - Row 24
+        - Row 25
+        - Row 26
+        - Row 27
+        - Row 28
+        - Row 29
+        - Row 30
+        - Row 31
+        - Row 32
+        - Row 33
+        - Row 34
+        - Row 36
+        - Row 37
+        - Row 38
+        - Row 41
+        - Row 42
+        - Row 43
+        - Row 44
+        - Row 45
+        - Row 46
+        - Row 47
+        - Row 48
+        - Row 49
+        - Row 50
+        - Row 51
+        - Row 52
+        - Row 53
+        - Row 54
+        - Row 61
+        - Row 63
+        - Row 64
+        - Row 65
+        - Row 68
+        - Row 69
+        - Row 70
+        - Row 71
+        - Row 72
+        - Row 73
+        - Row 78
+        - Row 80
+        - Row 81
+        - Row 82
+        - Row 84
+
+    - "SYSTEM_CONFIG flag" is =1
+        - TPS +Watts
+
+    - "SYSTEM_CONFIG flag" is = 0
+        - LOAN + Indirect
+        - LOAN + Direct
+        - LOAN + TPS
+
+    - #179110819 Incorrect Loan Pricing
+        - Verify the Loan Pricing
+ 
+    - #179196465 Add new item in response for the loan - Loan Base Price
+        - Verify the new item in response for loan - Loan Base Price
+  
+    - #179199225 Add  loan rules detail for the /api/loan_product_detail endpoint
+        - Verify the  loan rules detail for the /api/loan_product_detail endpoint
+
+    - #179128956 Add validation for the loan calculator
+        - without credit_product_name + term 10 + low + Direct
+        - with credit_product_name + term 10 + low + Direct
+        - with credit_product_name + term 10 + standard + Direct
+        - with credit_product_name + term 15 + low + Direct
+        - with credit_product_name + term 15 + ultralow + Direct
+        - with credit_product_name + term 15 + standard + Direct
+        - with credit_product_name + term 20 + low + Direct
+        - with credit_product_name + term 20 + ultralow + Direct
+        - with credit_product_name + term 20 + standard + Direct
+        - with credit_product_name + term 25 + low + Direct
+        - with credit_product_name + term 25 + ultralow+ Direct
+        - with credit_product_name + term 25 + standard + Direct
+
+    - #179058737 Update loan start date for the calculator
+        - Direct + With storage
+        - Direct + with storage and downpayment
+
+
+
+   
